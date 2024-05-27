@@ -1,58 +1,55 @@
-console.log('Hi!');
 
 function getHumanChoice(round){
 
-    let choice = prompt('Round '+ round + ', Rock, Paper or Scissors?').toLowerCase();
+    let choice = prompt('Round '+ round + '\nRock, Paper or Scissors?').toLowerCase();
     console.log("you chose " + choice);
 
-    if (choice === "rock"){
-        return 3;
-    }else if (choice === "paper"){
-        return 2;
-    }else if (choice === "scissors"){
-        return 1;
-    }else{
-        return 0;
-    }
+    return choice;
 }
 
 
 function getComputerChoice(){
     let ranno =Math.floor(Math.random() * 3) + 1;
-
     if (ranno === 3){
         console.log("computer chose rock!");
+        ranno = 'rock';
     }else if (ranno === 2){
         console.log("computer chose paper!");
+        ranno = 'paper';
     }else if (ranno === 1){
         console.log("computer chose scissors!");
+        ranno = 'scissors';
     }else{
+        console.log(ranno);
         return 0;
     }
-
+    console.log("ranoo:"  + ranno);
     return ranno;
 }
 
 function playRound(human, computer){
     if (human === computer){
-        alert("you both chose the same move");
+
+        alert("you chose "+ human +"\ncomputer chose "+computer+"\nyou both chose the same move");
         return 'draw';
-    }else if (human === 1 && computer === 2){
-        alert("Scissors beats Paper, You Win!");
+    }else if (human === 'scissors' && computer === 'paper'){
+        alert("you chose "+ human +"\ncomputer chose "+computer+"\nScissors beats Paper, You Win!");
         return 'win';
-    }else if (human === 1 && computer === 3){
+    }else if (human === 'scissors' && computer === 'rock'){
+        alert("you chose "+ human +"\ncomputer chose "+computer+"\nRock beats Scissors, You Lose!");
+        return 'win';
         return 'lose';
-    }else if (human === 2 && computer === 3){
-        alert("Paper beats Rock, You Win!");
+    }else if (human === 'paper' && computer === 'rock'){
+        alert("you chose "+ human +"\ncomputer chose "+computer+"\nPaper beats Rock, You Win!");
         return 'win';
-    }else if (human === 2 && computer === 1){
-        alert("Scissors beats Paper, You Lose!");
+    }else if (human === 'paper' && computer === 'scissors'){
+        alert("you chose "+ human +"\ncomputer chose "+computer+"\nScissors beats Paper, You Lose!");
         return 'lose';
-    }else if (human === 3 && computer === 1){
-        alert("Rock beats Scissors, You Win!");
+    }else if (human === 'rock' && computer === 'scissors'){
+        alert("you chose "+ human +"\ncomputer chose "+computer+"\nRock beats Scissors, You Win!");
         return 'win';
-    }else if (human === 3 && computer === 2){
-        alert("Paper beats Rock, You Lose!");
+    }else if (human === 'rock' && computer === 'paper'){
+        alert("you chose "+ human +"\ncomputer chose "+computer+"\nPaper beats Rock, You Lose!");
         return 'lose';
     }else{
         alert("Incorrect Input! Therefore you LOSE!");
@@ -67,8 +64,9 @@ function playGame(){
     while(game){
         let humanscore = 0;
         let computerscore = 0;
+        
     
-        alert("HI!?");
+        alert("Play Rock Paper Scissors! \ndoes backslash n work?");
         for (let rounds = 1; rounds < 6; rounds++){
             let WL = playRound(getHumanChoice(rounds), getComputerChoice());
     
@@ -80,7 +78,11 @@ function playGame(){
             console.log("human: " + humanscore + " computer: " + computerscore);
             alert("You: " + humanscore + " Computer: " + computerscore);
         }
-        let play = prompt("Game ended! Want to play again? type 'yes' or 'no'").toLowerCase();
+
+        let Won = humanscore>computerscore ? 'won!' : humanscore<computerscore ? 'lost!' : 'tied!';
+        alert("GAME OVER\nFinal Score:\nYou: " + humanscore + " \nComputer: " + computerscore +"\nYou " + Won);
+
+        let play = prompt("Game ended!\nWant to play again?\ntype 'yes' or 'no'").toLowerCase();
         if (play === 'yes'){
             game = true;
         }else {
@@ -92,6 +94,7 @@ function playGame(){
 
 }
 
+console.log("Hi!");
 playGame();
 
 
