@@ -1,0 +1,178 @@
+
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body > *{
+    flex:auto;
+}
+
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    padding-bottom: 10px;
+    font-size: 50px;
+}
+
+.gameScreen{
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    gap:32px;
+    align-items: center;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rockImg {
+    position: relative;
+    right: 20px;
+    bottom: 30px;
+    height: 200px;
+    border-radius: 75px;
+
+}
+.paperImg{
+    position: relative;
+    right: 20px;
+    bottom: 30px;
+    height: 200px;
+
+}
+.scissorsImg{
+    position: relative;
+    right: 20px;
+    bottom: 30px;
+    height: 200px;
+    border-radius: 75px;
+}
+
+button {
+    border: 0px;
+    background:none;
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    cursor: pointer;
+    background-color: rgba(31, 41, 55, 0.3);
+    border-radius: 75px;
+}
+
+.resultPanel {
+    display: flex;
+    height: 350px;
+    justify-content: center;
+
+}
+
+.results {
+    min-width: 700px;
+    max-width: 700px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: solid red 2px; */
+    margin-bottom: 30px;
+    background-color: rgba(31, 41, 55, 0.4);
+    border-radius: 80px;
+    color:white;
+}
+
+.results2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    min-height: 200px;
+    min-width: 700px;
+}
+
+
+.moveImgs {
+    min-width: 600px;
+    max-width: 600px;
+    min-height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.yourBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    right: 130px;
+    bottom: 80px;
+}
+.theirBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    left: 130px;
+    bottom: 80px
+}
+.bubble {
+    width: 200px;
+}
+
+.midSection{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 180px;
+}
+
+.playButton {
+    border: solid black 2px;
+    flex:0;
+}
+
+footer {
+    display: flex;
+    background-color: rgba(31, 41, 55, 0.8);
+    padding: 16px;
+    justify-content: center;
+    height: fit-content;
+    flex-grow: 0;
+    color: white;
+}
+
+.happyImg{
+    position: relative;
+    height: 160px;
+    left: 250px;
+    bottom: 200px;
+}
+
+.sadImg{
+    position: relative;
+    height:200px;
+    left: 250px;
+    bottom: 200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}

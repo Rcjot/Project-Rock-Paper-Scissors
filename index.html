@@ -4,14 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            background-image: url(pictures/gbpBG.png);
+        }
+    </style>
+
 </head>
 <body>
+    <header>
+        <div class="header">Rock Paper Scissors Game</div>
 
-    <button class="rock">rock</button>
-    <button class="paper">paper</button>
-    <button class="scissors">scissors</button>
+    </header>
 
-    <div class="results"></div>
+    <div class="gameScreen">
+        <div class="card">
+            <button class="rock"><img src="pictures/rockcrop.png" class="rockImg"></button>
+            <p>Rock</p>
+        </div>
+        <div class="card">
+            <button class="paper"><img src="pictures/paper.png" class="paperImg"></button>
+            <p>Paper</p>
+        </div>
+        <div class="card">
+            <button class="scissors"><img src="pictures/scissors.png" class="scissorsImg"></button>
+            <p>Scissors</p>
+        </div>
+        
+
+    </div>
+
+    <div class="resultPanel">
+        <div class="results">
+            <div class ="moveImgs">
+                <div class="yourBox">
+                    <img src="pictures/Yoububble.png" class="bubble" id="yourBubble">
+                    <p class="yourScore"></p>
+                </div>
+                <div class="midSection">
+                    <div class="displayRound"></div>
+                </div>
+                <div class="theirBox">
+                    <img src="pictures/Angrybubble.png" class="bubble" id="theirBubble">
+                    <p class="theirScore"></p>
+                </div>
+            </div>
+            <div class="results2"></div>
+        </div>
+    </div>
+
+
+    
+
+    <footer>Rcjot 2024</footer>
 
     <script src="script.js"></script>
 </body>
