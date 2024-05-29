@@ -1,5 +1,7 @@
 # Project-Rock-Paper-Scissors
 
+most image sources are from here: https://bandori.party/gallery/
+
 1
 .......................................................
 i still don't know how to properly make a pseudocode, maybe im just lazy...
