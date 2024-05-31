@@ -2,6 +2,7 @@
 
 most image sources are from here: https://bandori.party/gallery/
 
+live preview here!: https://rcjot.github.io/Project-Rock-Paper-Scissors/
 1
 .......................................................
 i still don't know how to properly make a pseudocode, maybe im just lazy...
